@@ -8,6 +8,9 @@ $dark-cyan: hsl(176, 72%, 28%)
 $black: hsl(0, 0%, 0%)
 $dark-gray: hsl(0, 0%, 48%)
 
+.display-block
+    display: block !important
+
 
 *, *::before, *::after
     margin: 0
@@ -23,3 +26,41 @@ body
         text-align: center
         a
             color: hsl(228, 45%, 44%)
+
+header
+    display: flex
+    position: relative
+    align-items: center
+    justify-content: space-between
+    background: url("../images/image-hero-mobile.jpg")
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    padding: 2rem 2rem 14rem
+    .links
+        display: none
+        position: absolute
+        left: 2rem
+        top: 6rem
+        width: calc(100% - 4rem)
+        list-style: none
+        background: white
+        border-radius: .5rem
+        z-index: 100
+        .link
+            padding: 1.25rem 1rem
+            border-bottom: 1px solid grey
+            a
+                color: black
+                font-weight: 600
+                text-decoration: none
+        .link:last-of-type
+            border: none
+    .hamburger-menu
+        width: 20px
+        height: 20px
+        background: url("../images/icon-hamburger.svg")
+        background-repeat: no-repeat
+        background-position: center
+        padding: .25rem
+        cursor: pointer

@@ -14,11 +14,11 @@ function toggleMenu () {
     links.classList.toggle('display-block');
     menuBackdrop.classList.toggle('display-block');
     if (links.classList.contains("display-block")) {
-        hamburger.style.backgroundImage = "url('../images/icon-close-menu.svg')";
+        hamburger.style.backgroundImage = "url('./images/icon-close-menu.svg')";
         menuBackdrop.scrollIntoView();
         body.style.overflow = "hidden";
     } else {
-        hamburger.style.backgroundImage = "url('../images/icon-hamburger.svg')";
+        hamburger.style.backgroundImage = "url('./images/icon-hamburger.svg')";
         body.style.overflow = "visible";
     }
 }

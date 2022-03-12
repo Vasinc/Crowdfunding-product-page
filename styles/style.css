@@ -17,15 +17,6 @@ body {
   font-family: 'Commissioner', sans-serif;
 }
 
-body .attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-body .attribution a {
-  color: #3e52a3;
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,16 +116,18 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 2rem;
+  padding: 0 2rem 4rem;
   gap: 2rem;
   background: whitesmoke;
 }
 
 .upper-section {
   text-align: center;
-  background: white;
+  width: 100%;
   -webkit-transform: translateY(-3rem);
           transform: translateY(-3rem);
+  background: white;
+  padding: 0 2rem;
   border-radius: 1rem;
   -webkit-box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.1);
           box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.1);
@@ -184,7 +177,7 @@ main {
   fill: white;
 }
 
-.fund-raiser__section {
+.fund-raiser__section, .about-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -201,7 +194,7 @@ main {
           box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.1);
 }
 
-.fund-raiser__section .fund-raiser__info {
+.fund-raiser__section .fund-raiser__info, .about-section .fund-raiser__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,15 +206,15 @@ main {
   line-height: 1.5;
 }
 
-.fund-raiser__section .fund-raiser__info p {
+.fund-raiser__section .fund-raiser__info p, .about-section .fund-raiser__info p {
   color: #7a7a7a;
 }
 
-.fund-raiser__section .fund-raiser__info .backers {
+.fund-raiser__section .fund-raiser__info .backers, .about-section .fund-raiser__info .backers {
   position: relative;
 }
 
-.fund-raiser__section .fund-raiser__info .backers::before {
+.fund-raiser__section .fund-raiser__info .backers::before, .about-section .fund-raiser__info .backers::before {
   content: '';
   position: absolute;
   top: -.5rem;
@@ -233,7 +226,7 @@ main {
   background: #7a7a7a;
 }
 
-.fund-raiser__section .fund-raiser__info .backers::after {
+.fund-raiser__section .fund-raiser__info .backers::after, .about-section .fund-raiser__info .backers::after {
   content: '';
   position: absolute;
   left: 50%;
@@ -245,7 +238,7 @@ main {
   background: #7a7a7a;
 }
 
-.fund-raiser__section .progress-bar {
+.fund-raiser__section .progress-bar, .about-section .progress-bar {
   position: relative;
   width: 100%;
   height: 1rem;
@@ -254,11 +247,118 @@ main {
   border-radius: 2rem;
 }
 
-.fund-raiser__section .progress-bar .progress {
+.fund-raiser__section .progress-bar .progress, .about-section .progress-bar .progress {
   position: absolute;
   height: 100%;
   width: 90%;
   background: #3cb4ac;
   border-radius: 2rem;
+}
+
+.about-section {
+  text-align: inherit;
+  gap: 2rem;
+}
+
+.about-section p {
+  color: #7a7a7a;
+}
+
+.about-section .reward-card {
+  padding: 1rem;
+  width: 100%;
+  border-radius: .5rem;
+  -webkit-box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+.about-section .reward-card h3 {
+  font-size: 1.2rem;
+}
+
+.about-section .reward-card h3 span {
+  display: block;
+  color: #3cb4ac;
+}
+
+.about-section .reward-card p {
+  margin: 1.5rem 0;
+}
+
+.about-section .reward-card h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
+  color: #7a7a7a;
+  margin-bottom: 1.5rem;
+}
+
+.about-section .reward-card h4 span {
+  font-size: 1.75rem;
+  color: black;
+}
+
+.about-section .reward-card:last-of-type h3 {
+  color: #7a7a7a;
+  opacity: .6;
+}
+
+.about-section .reward-card:last-of-type h3 span {
+  color: #94dbd7;
+}
+
+.about-section .reward-card:last-of-type p {
+  opacity: .6;
+}
+
+.about-section .reward-card:last-of-type h4 {
+  opacity: .6;
+}
+
+.about-section .reward-card:last-of-type h4 span {
+  color: #7a7a7a;
+}
+
+.about-section .reward-card:last-of-type .button {
+  opacity: .6;
+  background: #7a7a7a;
+}
+
+.about-section .reward-card:last-of-type .button:hover {
+  background: #7a7a7a;
+}
+
+.about-section .reward-card:last-of-type .button:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background: #7a7a7a;
+}
+
+footer {
+  padding: 4rem 0;
+  background: black;
+}
+
+footer .attribution {
+  color: white;
+  text-align: center;
+  font-weight: 500;
+}
+
+footer .attribution a {
+  color: #3cb4ac;
+  text-decoration: none;
+}
+
+footer .attribution a:hover {
+  color: #226763;
+}
+
+footer .attribution a:active {
+  color: #226763;
 }
 /*# sourceMappingURL=style.css.map */

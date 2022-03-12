@@ -161,6 +161,10 @@ main {
   margin: 2rem 0;
 }
 
+.upper-section .buttons .button {
+  padding: 1rem 1.25rem;
+}
+
 .upper-section .buttons svg:hover circle {
   fill: #147b74;
 }

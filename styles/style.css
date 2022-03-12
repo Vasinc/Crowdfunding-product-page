@@ -44,6 +44,18 @@ header {
   padding: 2rem 2rem 14rem;
 }
 
+header .menu-backgrop {
+  display: none;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(rgba(0, 0, 0, 0.3)), to(transparent));
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3), transparent);
+  width: 100%;
+  height: calc( 100vh + 100vh);
+  -webkit-transform: translateX(-2rem);
+          transform: translateX(-2rem);
+  z-index: 99;
+}
+
 header .links {
   display: none;
   position: absolute;
@@ -79,5 +91,174 @@ header .hamburger-menu {
   background-position: center;
   padding: .25rem;
   cursor: pointer;
+  z-index: 101;
+}
+
+.button {
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  border: none;
+  background: #3cb4ac;
+  color: white;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.button:hover {
+  background: #147b74;
+}
+
+.button:active {
+  background: #147b74;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+  gap: 2rem;
+  background: whitesmoke;
+}
+
+.upper-section {
+  text-align: center;
+  background: white;
+  -webkit-transform: translateY(-3rem);
+          transform: translateY(-3rem);
+  border-radius: 1rem;
+  -webkit-box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upper-section #circleLogo {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.upper-section h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.upper-section p {
+  color: #7a7a7a;
+}
+
+.upper-section .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.upper-section .buttons svg:hover circle {
+  fill: #147b74;
+}
+
+.upper-section .buttons svg:hover path {
+  fill: white;
+}
+
+.upper-section .buttons svg:active circle {
+  fill: #147b74;
+}
+
+.upper-section .buttons svg:active path {
+  fill: white;
+}
+
+.fund-raiser__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 100%;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  -webkit-box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fund-raiser__section .fund-raiser__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  line-height: 1.5;
+}
+
+.fund-raiser__section .fund-raiser__info p {
+  color: #7a7a7a;
+}
+
+.fund-raiser__section .fund-raiser__info .backers {
+  position: relative;
+}
+
+.fund-raiser__section .fund-raiser__info .backers::before {
+  content: '';
+  position: absolute;
+  top: -.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 30%;
+  height: 1px;
+  background: #7a7a7a;
+}
+
+.fund-raiser__section .fund-raiser__info .backers::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -1rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 30%;
+  height: 1px;
+  background: #7a7a7a;
+}
+
+.fund-raiser__section .progress-bar {
+  position: relative;
+  width: 100%;
+  height: 1rem;
+  margin-top: 2rem;
+  background: #b3b3b3;
+  border-radius: 2rem;
+}
+
+.fund-raiser__section .progress-bar .progress {
+  position: absolute;
+  height: 100%;
+  width: 90%;
+  background: #3cb4ac;
+  border-radius: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

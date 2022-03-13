@@ -93,6 +93,7 @@ header .hamburger-menu {
   color: white;
   font-weight: 700;
   font-size: 1.05rem;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -106,6 +107,7 @@ header .hamburger-menu {
 }
 
 main {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,6 +121,227 @@ main {
   padding: 0 2rem 4rem;
   gap: 2rem;
   background: whitesmoke;
+}
+
+.backdrop {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: calc(100vh + 100vh + 100vh);
+  -webkit-transform: translateY(-20rem);
+          transform: translateY(-20rem);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+
+.modal-succes {
+  position: absolute;
+  display: none;
+  margin: 0 2rem;
+  padding: 1.5rem;
+  text-align: center;
+  background: white;
+  -webkit-transform: translateY(-6rem);
+          transform: translateY(-6rem);
+  border-radius: .5rem;
+  z-index: 10001;
+}
+
+.modal-succes img {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.modal-succes h2 {
+  margin: 1rem 0;
+}
+
+.modal-succes p {
+  margin: 1rem 0;
+}
+
+.modal-succes .button {
+  margin: 1rem 0;
+}
+
+.modals-section {
+  display: none;
+  position: absolute;
+  margin: 0 2rem;
+  padding: 1.25rem;
+  background: white;
+  -webkit-transform: translateY(-8rem);
+          transform: translateY(-8rem);
+  border-radius: .5rem;
+  z-index: 10000;
+}
+
+.modals-section h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.modals-section h2 span svg {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.modals-section h2 span svg path {
+  fill: #7a7a7a;
+}
+
+.modals-section p {
+  color: #7a7a7a;
+}
+
+.modals-section .modal {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: .5rem;
+  -webkit-box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+.modals-section .modal .modal__upper-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.modals-section .modal .modal__upper-section .modal__upper-section-text h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .5rem;
+}
+
+.modals-section .modal .modal__upper-section .modal__upper-section-text h3 span {
+  color: #3cb4ac;
+}
+
+.modals-section .modal .modal__upper-section .circle-button {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+}
+
+.modals-section .modal .modal__upper-section .circle-button::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid #7a7a7a;
+}
+
+.modals-section .modal p {
+  margin: 1.5rem 0;
+  cursor: pointer;
+}
+
+.modals-section .modal .modal__lower-section {
+  position: relative;
+  display: none;
+}
+
+.modals-section .modal .modal__lower-section::before {
+  content: '';
+  width: calc( 100% + 2rem);
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  background: #7a7a7a;
+}
+
+.modals-section .modal .modal__lower-section h5 {
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #7a7a7a;
+}
+
+.modals-section .modal .modal__lower-section .enter-money__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.modals-section .modal .modal__lower-section .enter-money__section .button {
+  padding: .5rem 1.5rem;
+}
+
+.modals-section .modal .modal__lower-section .money-section::before {
+  content: '$';
+  position: relative;
+  font-size: 1.15rem;
+  left: 1.5rem;
+  z-index: 100;
+}
+
+.modals-section .modal .modal__lower-section .money-section .lower-section__money {
+  width: 6rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid #7a7a7a;
+  font-size: 1.25rem;
+}
+
+.modals-section .modal h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .25rem;
+  margin-bottom: 1rem;
+  color: #7a7a7a;
+}
+
+.modals-section .modal h4 span {
+  font-size: 1.75rem;
+  color: black;
+}
+
+.modals-section .modal:last-of-type .modal__upper-section .modal__upper-section-text {
+  opacity: .5;
+}
+
+.modals-section .modal:last-of-type p {
+  opacity: .7;
+}
+
+.modals-section .modal:last-of-type h4 {
+  opacity: .5;
+}
+
+.modals-section .modal:last-of-type p {
+  margin: 2rem 0;
 }
 
 .upper-section {
@@ -254,7 +477,7 @@ main {
 .fund-raiser__section .progress-bar .progress, .about-section .progress-bar .progress {
   position: absolute;
   height: 100%;
-  width: 90%;
+  width: 50%;
   background: #3cb4ac;
   border-radius: 2rem;
 }
@@ -364,5 +587,36 @@ footer .attribution a:hover {
 
 footer .attribution a:active {
   color: #226763;
+}
+
+@media (max-width: 400px) {
+  body main .modals-section .modal .modal__lower-section .enter-money__section .button {
+    padding: .25rem;
+  }
+}
+
+@media (max-width: 370px) {
+  body .button {
+    padding: .5rem .75rem;
+    font-weight: 400;
+  }
+  body main .upper-section .buttons {
+    gap: .5rem;
+  }
+  body main .upper-section .buttons .button {
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 330px) {
+  body main .upper-section .buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .modals-section .modal .modal__lower-section .enter-money__section .money-section::before {
+    content: '';
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -77,18 +77,160 @@ header
     color: white
     font-weight: 700
     font-size: 1.05rem
+    cursor: pointer
     &:hover
         background: $dark-cyan
     &:active
         background: $dark-cyan
         transform: scale(.95)
 main
+    position: relative
     display: flex
     flex-direction: column
     align-items: center
     padding: 0 2rem 4rem
     gap: 2rem
     background: lighten(grey, 46%)
+
+.backdrop
+    display: none
+    position: absolute
+    width: 100%
+    height: calc(100vh + 100vh + 100vh)
+    transform: translateY(-20rem)
+    background: rgba(0, 0, 0, .4)
+    z-index: 9999
+
+.modal-succes
+    position: absolute
+    display: none
+    margin: 0 2rem
+    padding: 1.5rem
+    text-align: center
+    background: white
+    transform: translateY(-6rem)
+    border-radius: .5rem
+    z-index: 10001
+    img
+        transform: scale(1.4)
+    h2
+        margin: 1rem 0
+    p
+        margin: 1rem 0
+    .button
+        margin: 1rem 0
+
+.modals-section
+    display: none
+    position: absolute
+    margin: 0 2rem
+    padding: 1.25rem
+    background: white
+    transform: translateY(-8rem)
+    border-radius: .5rem
+    z-index: 10000
+    h2
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 2rem
+        span
+            svg
+                transform: scale(1.25)
+                path
+                    fill: $dark-gray
+    p
+        color: $dark-gray
+    .modal
+        margin-top: 2rem
+        padding: 1rem
+        border-radius: .5rem
+        box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, .2)
+        .modal__upper-section
+            display: flex
+            align-items: center
+            gap: 1rem
+            cursor: pointer
+            .modal__upper-section-text
+                h3
+                    display: flex
+                    flex-direction: column
+                    gap: .5rem
+                    span
+                        color: $moderate-cyan
+            .circle-button
+                position: relative
+                width: 10px
+                height: 10px
+                border-radius: 50%
+                background: white
+                &::after
+                    content: ''
+                    position: absolute
+                    width: 20px
+                    height: 20px
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    border-radius: 50%
+                    border: 1px solid $dark-gray
+        p
+            margin: 1.5rem 0
+            cursor: pointer
+        .modal__lower-section
+            position: relative
+            display: none
+            &::before
+                content: ''
+                width: calc( 100% + 2rem )
+                height: 1px
+                position: absolute
+                top: 0
+                left: -1rem
+                background: $dark-gray
+            h5
+                padding: 2rem 0
+                text-align: center
+                font-size: 1.1rem
+                color: $dark-gray
+            .enter-money__section
+                display: flex
+                gap: 1rem
+                .button
+                    padding: .5rem 1.5rem
+            .money-section
+                &::before
+                    content: '$'
+                    position: relative
+                    font-size: 1.15rem
+                    left: 1.5rem
+                    z-index: 100
+                .lower-section__money
+                    width: 6rem
+                    padding: 1rem 1.5rem
+                    border-radius: 1.25rem
+                    border: 1px solid $dark-gray
+                    font-size: 1.25rem
+        h4
+            display: flex
+            align-items: center
+            gap: .25rem
+            margin-bottom: 1rem
+            color: $dark-gray
+            span
+                font-size: 1.75rem
+                color: $black
+    .modal:last-of-type
+        .modal__upper-section
+            .modal__upper-section-text
+                opacity: .5
+        p
+            opacity: .7
+        h4
+            opacity: .5
+            
+        p
+            margin: 2rem 0
 
 .upper-section
     text-align: center
@@ -171,7 +313,7 @@ main
         .progress
             position: absolute
             height: 100%
-            width: 90%
+            width: 50%
             background: $moderate-cyan
             border-radius: 2rem
                 
@@ -237,3 +379,40 @@ footer
                 color: darken($moderate-cyan, 20%)
             &:active
                 color: darken($moderate-cyan, 20%)
+
+@media ( max-width: 400px)
+    body
+        main
+            .modals-section
+                .modal
+                    .modal__lower-section
+                        .enter-money__section
+                            .button
+                                padding: .25rem
+
+@media  ( max-width: 370px )
+    body
+        .button
+            padding: .5rem .75rem
+            font-weight: 400
+        main
+            .upper-section
+                .buttons
+                    gap: .5rem
+                    .button
+                        font-weight: 400
+
+@media ( max-width: 330px )
+    body
+        main
+            .upper-section
+                .buttons
+                    flex-direction: column
+            .modals-section
+                .modal
+                    .modal__lower-section
+                        .enter-money__section
+                            .money-section
+                                &::before
+                                    content: ''
+                                    

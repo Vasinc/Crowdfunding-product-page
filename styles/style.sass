@@ -106,6 +106,7 @@ main
     display: none
     margin: 0 2rem
     padding: 1.5rem
+    max-width: 800px
     text-align: center
     background: white
     transform: translateY(-6rem)
@@ -125,10 +126,13 @@ main
     position: absolute
     margin: 0 2rem
     padding: 1.25rem
+    max-width: 800px
     background: white
     transform: translateY(-8rem)
     border-radius: .5rem
     z-index: 10000
+    .close-modal
+        cursor: pointer
     h2
         display: flex
         justify-content: space-between
@@ -235,6 +239,7 @@ main
 .upper-section
     text-align: center
     width: 100%
+    max-width: 800px
     transform: translateY(-3rem)
     background: white
     padding: 0 2rem
@@ -272,6 +277,7 @@ main
     flex-direction: column   
     text-align: center
     width: 100%
+    max-width: 800px
     padding: 2rem
     background: white
     border-radius: 1rem
@@ -320,6 +326,7 @@ main
 .about-section
     @extend .fund-raiser__section
     text-align: inherit
+    max-width: 800px
     gap: 2rem
     p
         color: $dark-gray
@@ -415,4 +422,75 @@ footer
                             .money-section
                                 &::before
                                     content: ''
-                                    
+                                  
+                                  
+@media ( min-width: 800px ) 
+    body
+        header
+            .links
+                position: relative
+                display: flex
+                width: auto
+                background: none
+                left: inherit
+                top: inherit
+                .link
+                    border: none
+                    a
+                        color: white
+                        font-weight: 500
+                        font-size: 1rem
+            .hamburger-menu
+                display: none
+        main
+            .upper-section
+                .buttons
+                    display: flex
+                    justify-content: space-around
+            .fund-raiser__section
+                .fund-raiser__info
+                    flex-direction: row
+                    justify-content: space-evenly
+                    .backers
+                        &::before
+                            content: ''
+                            top: 50%
+                            left: -5rem
+                            width: 50%
+                            transform: rotate(90deg)
+                        &::after
+                            content: ''
+                            top: 50%
+                            left: 9rem
+                            width: 50%
+                            transform: rotate(90deg)
+            .about-section
+                .reward-card
+                    h3
+                        display: flex
+                        justify-content: space-between
+                        span
+                            display: inline
+                    h4
+                        display: inline
+                    .button
+                        margin-left: 350px
+            .modals-section
+                .modal
+                    .modal__upper-section
+                        .modal__upper-section-text
+                            h3
+                                flex-direction: row
+                    .modal__lower-section
+                        .enter-money__section
+                            margin-left: 50%
+                            transform: translateX(-35%)
+@media ( min-width: 850px )
+    body
+        main
+            .about-section
+                .reward-card
+                    .button
+                        margin-left: 400px
+                
+                            

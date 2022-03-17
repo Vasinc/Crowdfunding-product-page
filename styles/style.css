@@ -139,6 +139,7 @@ main {
   display: none;
   margin: 0 2rem;
   padding: 1.5rem;
+  max-width: 800px;
   text-align: center;
   background: white;
   -webkit-transform: translateY(-6rem);
@@ -169,11 +170,16 @@ main {
   position: absolute;
   margin: 0 2rem;
   padding: 1.25rem;
+  max-width: 800px;
   background: white;
   -webkit-transform: translateY(-8rem);
           transform: translateY(-8rem);
   border-radius: .5rem;
   z-index: 10000;
+}
+
+.modals-section .close-modal {
+  cursor: pointer;
 }
 
 .modals-section h2 {
@@ -347,6 +353,7 @@ main {
 .upper-section {
   text-align: center;
   width: 100%;
+  max-width: 800px;
   -webkit-transform: translateY(-3rem);
           transform: translateY(-3rem);
   background: white;
@@ -414,6 +421,7 @@ main {
           flex-direction: column;
   text-align: center;
   width: 100%;
+  max-width: 800px;
   padding: 2rem;
   background: white;
   border-radius: 1rem;
@@ -484,6 +492,7 @@ main {
 
 .about-section {
   text-align: inherit;
+  max-width: 800px;
   gap: 2rem;
 }
 
@@ -617,6 +626,96 @@ footer .attribution a:active {
   }
   body main .modals-section .modal .modal__lower-section .enter-money__section .money-section::before {
     content: '';
+  }
+}
+
+@media (min-width: 800px) {
+  body header .links {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    background: none;
+    left: inherit;
+    top: inherit;
+  }
+  body header .links .link {
+    border: none;
+  }
+  body header .links .link a {
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  body header .hamburger-menu {
+    display: none;
+  }
+  body main .upper-section .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body main .fund-raiser__section .fund-raiser__info, body main .about-section .fund-raiser__info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  body main .fund-raiser__section .fund-raiser__info .backers::before, body main .about-section .fund-raiser__info .backers::before {
+    content: '';
+    top: 50%;
+    left: -5rem;
+    width: 50%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  body main .fund-raiser__section .fund-raiser__info .backers::after, body main .about-section .fund-raiser__info .backers::after {
+    content: '';
+    top: 50%;
+    left: 9rem;
+    width: 50%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  body main .about-section .reward-card h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body main .about-section .reward-card h3 span {
+    display: inline;
+  }
+  body main .about-section .reward-card h4 {
+    display: inline;
+  }
+  body main .about-section .reward-card .button {
+    margin-left: 350px;
+  }
+  body main .modals-section .modal .modal__upper-section .modal__upper-section-text h3 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body main .modals-section .modal .modal__lower-section .enter-money__section {
+    margin-left: 50%;
+    -webkit-transform: translateX(-35%);
+            transform: translateX(-35%);
+  }
+}
+
+@media (min-width: 850px) {
+  body main .about-section .reward-card .button {
+    margin-left: 400px;
   }
 }
 /*# sourceMappingURL=style.css.map */

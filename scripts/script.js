@@ -17,6 +17,8 @@ const modalSuccesBtn = modalSucces.querySelector('.button');
 let BambooStand = 101;
 let BlackEditionStand = 64;
 
+let HAS_EVENT_LISTENER = false;
+
 function toggleMenu () {
     links.classList.toggle('display-block');
     menuBackdrop.classList.toggle('display-block');
@@ -37,7 +39,15 @@ function toggleModal () {
 
 hamburger.addEventListener('click', toggleMenu);
 
-links.addEventListener('click', toggleMenu);
+links.addEventListener('click', () => {
+    if ( body.clientWidth < 800  && HAS_EVENT_LISTENER) {
+        links.removeEventListener('click', toggleMenu);
+        HAS_EVENT_LISTENER = false;
+    } else {
+        links.addEventListener('click', toggleMenu);
+        HAS_EVENT_LISTENER = true;
+    }
+});
 
 menuBackdrop.addEventListener('click', toggleMenu);
 
